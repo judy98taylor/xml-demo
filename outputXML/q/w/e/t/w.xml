@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<business>
+  <company asd="asd" id="id" name="name">Code Blog</company>
+  <owner>Nic Raboy</owner>
+  <employee>
+    <firstname>Nic</firstname>
+    <lastname asd="asd" id="id" name="name">Raboy</lastname>
+  </employee>
+  <employee>
+    <firstname>Maria</firstname>
+    <lastname>Campos</lastname>
+  </employee>
+  <aaa>aaa</aaa>
+</business>
