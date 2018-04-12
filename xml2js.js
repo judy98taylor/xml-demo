@@ -14,41 +14,37 @@ fs.readFile('./a.xml', function(err, data) {
     console.log(err);
   } else {
     let xml = data.toString('utf-8');
-    parseString(
-      xml,
-      { explicitArray: false, ignoreAttrs: true, trim: true },
-      function(err, result) {
-        console.dir(JSON.stringify(result));
-        // console.log(JSON.stringify(result));
-        let json = JSON.stringify(result);
-        fs.writeFile('output.json', json, function(err) {
-          if (err) {
-            console.log(err);
-          } else {
-            console.log('output.json ok.');
+    parseString(xml, { explicitArray: false }, function(err, result) {
+      console.dir(JSON.stringify(result));
+      // console.log(JSON.stringify(result));
+      let json = JSON.stringify(result);
+      fs.writeFile('output.json', json, function(err) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('output.json ok.');
 
-            let builder = new xml2js.Builder();
-            let newXml = builder.buildObject(result);
-            fs.writeFile('output.xml', newXml, function(err) {
-              if (err) {
-                console.log(err);
-              } else {
-                console.log('output.xml ok.');
-              }
-            });
-          }
-        });
+          let builder = new xml2js.Builder();
+          let newXml = builder.buildObject(result);
+          fs.writeFile('output.xml', newXml, function(err) {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log('output.xml ok.');
+            }
+          });
+        }
+      });
 
-        // let builder = new xml2js.Builder();
-        // let newXml = builder.buildObject(result);
-        // fs.writeFile('output.xml', newXml, function(err) {
-        //   if (err) {
-        //     console.log(err);
-        //   } else {
-        //     console.log('output.xml ok.');
-        //   }
-        // });
-      }
-    );
+      // let builder = new xml2js.Builder();
+      // let newXml = builder.buildObject(result);
+      // fs.writeFile('output.xml', newXml, function(err) {
+      //   if (err) {
+      //     console.log(err);
+      //   } else {
+      //     console.log('output.xml ok.');
+      //   }
+      // });
+    });
   }
 });

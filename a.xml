@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <business>
-    <company>Code Blog</company>
+    <company asd="asd" id="id" name="name">Code Blog</company>
     <owner>Nic Raboy</owner>
     <employee>
         <firstname>Nic</firstname>
-        <lastname>Raboy</lastname>
+        <lastname asd="asd" id="id" name="name">Raboy</lastname>
     </employee>
     <employee>
         <firstname>Maria</firstname>

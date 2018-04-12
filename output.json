@@ -1,1 +1,1 @@
-{"business":{"company":"Code Blog","owner":"Nic Raboy","employee":[{"firstname":"Nic","lastname":"Raboy"},{"firstname":"Maria","lastname":"Campos"}]}}
+{"business":{"company":{"_":"Code Blog","$":{"asd":"asd","id":"id","name":"name"}},"owner":"Nic Raboy","employee":[{"firstname":"Nic","lastname":{"_":"Raboy","$":{"asd":"asd","id":"id","name":"name"}}},{"firstname":"Maria","lastname":"Campos"}]}}
